@@ -12,9 +12,9 @@ let arr = [34,45,67,89,90]        // array which group of the variable
 console.log(arr,typeof(arr))       //which is object 
 
 //Array constructor
-// you can also intialize using constructor
+//main point about the array that sort m
 let arr1 = new Array(7)     //parameter which is length 
-
+console.log(arr1)
 
 
 
