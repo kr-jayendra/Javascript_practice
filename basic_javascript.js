@@ -1,4 +1,3 @@
-
 //  javascript variable
 // let val1 = "consistency is key"   //string 
 // console.log(val1,typeof(val1))

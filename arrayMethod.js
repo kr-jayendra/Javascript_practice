@@ -45,6 +45,10 @@ console.log(finde)  //67
 const charArr = Array.from("jayendra");
 console.log(charArr)
 
+// includes()
+console.log(arr.includes(45));
+
+const cvarrtostr = ['glass','join','glass']
 
 //main point about the array that sort method sort the string type which lexicographic order
 // ex : 
