@@ -142,7 +142,40 @@ let array4 = ['val1','val2','val3','val4','val5'];
 let [val1,val2,...array5] = array4;
 console.log(val1,val2,array5)
 
-
 // temporal dead zone 
 // console.log(a)
 // let a
+
+// set
+
+const nums5 = [45,34,2,1,2,7,8,45,78,20,10]
+// const set = new Set(nums5);
+
+const set = new Set();
+set.add(2)
+set.add(2)
+set.add(2)
+set.add(2)
+set.add(2)
+set.add(5)
+set.add(8)
+console.log(set);
+
+// check whether element present or not 
+console.log(set.has(5));
+
+// Map()
+// key value 
+const map = new Map();
+map.set("firstName","jayendra");
+map.set("age",21);
+map.set("lastName","parmar");
+
+for(const key of map){  
+    // console.log(key,value)
+    console.log(key,Array.isArray(key))
+}
+
+// get the value 
+console.log(map.get("age"));
+
