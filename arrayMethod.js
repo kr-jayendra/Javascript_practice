@@ -48,7 +48,82 @@ console.log(charArr)
 // includes()
 console.log(arr.includes(45));
 
-const cvarrtostr = ['glass','join','glass']
+// join()
+const joinStr = arr.join('-');
+console.log(joinStr);   //34-45-67-89-90-56-78-90-23-45 return as string 
+
+// map 
+const nums = [22,78,11,90,3,23,909,233,898]
+const numsmap = nums.map((e)=> e * 2);
+console.log(numsmap);
+
+//reduce(callback(accumulator,currentvalue,currentindex)) method 
+const nums2 = [0,1,2,3,4]
+let intialvalue = 1;
+const sumofelement = nums2.reduce((acc,e,i)=> acc + e,intialvalue);
+console.log(sumofelement);
+
+// find the occurance of given element 
+const fruits = [ 'Banana', 'Orange', 'Apple', 'Orange', 'Pear', 'Banana']
+const occurrences = fruits.reduce((acc, currFruit) => {
+            //spreadopertor
+    return {...acc, [currFruit]: (acc[currFruit] || 0) + 1 }
+}, {})
+console.log(occurrences)
+
+// second example 
+//indivdiual element that to sort by highest frequency to lower 
+// const nums3 = ['abbced','jayedra','locked','bccedprt']
+
+// const nums4 = nums3.reduce((acc,element)=>{
+
+
+
+
+//     const frArr = element.reduce((acc,currchar)=>{
+//         return {...acc,[currchar]:(acc[currchar] || 0) + 1}
+//     },{})
+//     console.log(frArr);
+// })
+
+const students = [
+    [  "Kingsley",  70 ],
+    [  "Jack",  80 ],
+    [  "Joe",  63 ],
+    [  "Beth",  75 ],
+    [  "Kareem",  59 ],
+    [  "Sarah",  93]
+]
+
+// to divided the name and score in seperate array using reduce property 
+// const names = students.reduce((acc,student)=> [...acc, { student[0] : student[1]} ],{})
+// console.log(names);
+
+
+// slice(start,end)  return array of the shallow copy given element
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// // console.log(anarr); 
+// var anarr = animals.slice(2,4);
+// anarr[0] = 'lion'
+// console.log(animals,anarr);
+
+// splice
+// splice(start)
+// splice(start, deleteCount)
+// splice(start, deleteCount, item1)
+// splice(start, deleteCount, item1, item2, itemN)
+
+// inserting element
+let firstan = animals.splice(0,0,'lion')
+console.log(animals)
+
+// delete element 
+animals.splice(2,1);
+console.log(animals)
+
+//delete two element and add in index 1 to three element 
+animals.splice(1,2,'tiger','fox','wolvern')
+console.log(animals)
 
 //main point about the array that sort method sort the string type which lexicographic order
 // ex : 
@@ -62,3 +137,12 @@ array.sort((a,b)=> a-b);
 console.log(array);
 // Array(7) [ 12, 23, 34, 100, 567, 3000, 20000 ]
 
+//array destructing 
+let array4 = ['val1','val2','val3','val4','val5'];
+let [val1,val2,...array5] = array4;
+console.log(val1,val2,array5)
+
+
+// temporal dead zone 
+// console.log(a)
+// let a
