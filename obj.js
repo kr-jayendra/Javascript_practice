@@ -128,3 +128,20 @@ function Person(name, job, yearOfBirth){
 }
 // this will show Person's prototype property.
 console.log(Person.prototype);
+
+
+// this property 
+const person = {
+    name : 'renish',
+    walk(){
+        // console.log("should be walk due to overweight");
+        console.log(this);
+    }
+}
+
+
+// person.walk()
+const walk = person.walk        //assign the refernce is the walk 
+// walk()  //return the global object which is the window 
+        // but if as strict mode on (in ES6 by difualt is on) than goes error 
+console.log(walk,typeof walk)
