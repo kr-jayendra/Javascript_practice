@@ -30,7 +30,6 @@ function User(firstName, lastName, email, age, address){
     this.is18 =  function(){
         return this.age >= 18;
     }
-    
 }
 
 // const u1 = createUser("harshad","parmar","parmar@mail.com",23,"gujarat");
@@ -48,8 +47,25 @@ const band = {
     bandName : "led zepplin",
     famousSong: "stariway to heaven",
     year:2001,
-    viralSong:"yararanna.."
+    viralSong:"yararanna..",
+    walk(){
+        console.log("this is the walk guys");
+    },
+    shllow : function(){
+        console.log("this is the variable")
+    }
+    
 };
+
+console.log(band.walk());
+console.log(band.shllow());
+
+
+// for (const it of band) {
+//     console.log(it);
+// }
+
+console.log("-----------------------------------------------------------------------------------------------------")
 
 
 const {bandName ,famousSong,...restcon } = band; 
@@ -100,3 +116,15 @@ for(const u of users){
 // // bind method is similar but its return the function 
 // const method = obj.fun.bind(obj2,"obj2","obj2-last")
 // method();
+
+console.log("-----------------------------------------------------------------------------------------------------")
+// prototype
+
+// function constructor
+function Person(name, job, yearOfBirth){   
+    this.name= name;
+    this.job= job;
+    this.yearOfBirth= yearOfBirth;
+}
+// this will show Person's prototype property.
+console.log(Person.prototype);

@@ -1,0 +1,23 @@
+{
+  "name": "pratice_javascript",
+  "version": "1.0.0",
+  "description": "javscript priactice",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kr-jayendra/Javascript_practice.git"
+  },
+  "author": "jayendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kr-jayendra/Javascript_practice/issues"
+  },
+  "homepage": "https://github.com/kr-jayendra/Javascript_practice#readme"
+}

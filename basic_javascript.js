@@ -141,5 +141,51 @@ array.sort();
 // therefore use to callback in sort method 
 array.sort((a,b)=> a-b);
 console.log(array);
-// Array(7) [ 12, 23, 34, 100, 567, 3000, 20000 ]
+// Array(7) [ 12, 23, 34, 100, 567, 3000, 20000 ]Person.prototype.calculateAge= function(){
+    console.log('The current age is: '+(2019- this.yearOfBirth));
 
+console.log(Person.prototype);
+
+// let x = 9.656;
+// x.toFixed(0);
+// console.log(x);
+// x.toFixed(2);
+// console.log(x);
+// x.toFixed(4);
+// console.log(x);
+// x.toFixed(6);
+// console.log(x);// function constructor
+function Person(name, job, yearOfBirth){   
+    this.name= name;
+    this.job= job;
+    this.yearOfBirth= yearOfBirth;
+}
+// this will show Person's prototype property.
+console.log(Person.prototype);
+
+Array.prototype.calculateAge= function(){
+    console.log('The current age is: '+(2019- this.yearOfBirth));
+}
+console.log(Array.prototype);
+
+const p1 = new Person("jayendra","do",23);
+console.log(p1);
+
+const p2 = new Person("nitin","do",45);
+console.log(p2);
+
+// function User(firstName, lastName, email, age, address){
+
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+//     this.age = age;
+//     this.address = address;
+//     this.about = function(){
+//         return `${this.firstName} is ${this.age} years old.`;
+//     };
+//     this.is18 =  function(){
+//         return this.age >= 18;
+//     }
+// }
+// console.log(User.prototype);
