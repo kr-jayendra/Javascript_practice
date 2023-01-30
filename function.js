@@ -115,3 +115,20 @@ function printDetails({firstName,gender,age}){
 
 printDetails(person)
 // console.log()
+
+let val1 = "this is global var"
+let y = function(){
+    console.log(val1)
+}
+
+let fun1 = function(){
+    val1 = "this is block of the x"
+    return y;
+}
+
+//here refer noraml block scope 
+y()
+let z = fun1();     //when after lexical bind attach than 
+y()                 //function follow the closure or its closure 
+// z();
+
