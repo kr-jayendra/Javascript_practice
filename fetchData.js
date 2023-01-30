@@ -24,7 +24,7 @@ apiCall.then((data) =>
 
         // const keys = Object.keys(element.currencies);
         // console.log(keys)
-        str += `<div class="card" style="width: 18rem;">
+        str += `<div class="card cards" style="width: 18rem;">
       <img src="${element.flags.png}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${element.name.common}</h5>
