@@ -85,37 +85,50 @@ let successfullyPaymentCard = (orderid) => {
     return pr;
 }
 
-const promise = successfullyPaymentCard("234")
+// const promise = successfullyPaymentCard("234")
 
 // promise chain 
-// promise
-//   .then((orderId) => {
-//     console.log(orderId);    //when promise resolve its called and its return orderid as promise 
-//     return orderId;          // return orderid as promise
-//   })
-//   .then((orderId) => {
-//     //this logic here its say when you not return than return undefinded  after specific time its return the orderid
-//     // after two second
-//     // setTimeout(() => {
-//     //   console.log(orderId);
-//     //   return orderId;
-//     // }, 2000);
-//     return orderId   //here return orderid but above settimeout which timer 2s therefore after 2s above code execute when promise chain resolve (all of the code executed)
-//   })
-//   .then((orderId) => {
-//       setTimeout(() => {
-//         console.log(orderId)
-//       }, 2000);
-//     // return orderId;
-//   })
-//   .then((orderId) => {
-//     //the chain arrived to here after five second and its get the undefined
-//     console.log(orderId);
-//     return orderId;
-//   })
-//   .catch((err) => {
-//     console.log(err.message);
-//   });
+promise
+  .then((orderId) => {
+    console.log(orderId);    //when promise resolve its called and its return orderid as promise 
+    return orderId;          // return orderid as promise
+  })
+  .then((orderId) => {
+    //this logic here its say when you not return than return undefinded  after specific time its return the orderid
+    // after two second
+    // setTimeout(() => {
+    //   console.log(orderId);
+    //   return orderId;
+    // }, 2000);
+    return orderId   //here return orderid but above settimeout which timer 2s therefore after 2s above code execute when promise chain resolve (all of the code executed)
+  })
+  .then((orderId) => {
+      setTimeout(() => {promise.then((orderid) => {
+    console.log("product orderid : ", orderid)
+}).catch((err) => {
+    console.log(err.message);
+})
+
+let cb3 = function () {
+    setTimeout(() => {
+        console.log("this is the execute after 1 second ")
+    }, 3000);
+}
+
+cb3();
+
+        console.log(orderId)
+      }, 2000);
+    // return orderId;
+  })
+  .then((orderId) => {
+    //the chain arrived to here after five second and its get the undefined
+    console.log(orderId);
+    return orderId;
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 
 
 // when any perticular time settimeout and its promise both not called at time more priority 
@@ -128,10 +141,51 @@ promise.then((orderid) => {
     console.log(err.message);
 })
 
-let cb3 = function(){
+let cb3 = function () {
     setTimeout(() => {
         console.log("this is the execute after 1 second ")
     }, 3000);
 }
 
 cb3();
+
+//async-await
+// There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. 
+// It’s surprisingly easy to understand and use.
+
+async function f() {
+    // return 1;
+    // you can also same as 
+    return Promise.resolve(1);
+}
+
+f().then((e) => console.log(e));     //return the promise 
+
+// await, that works only inside async functions
+
+async function fun() {
+
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 1000)
+    });
+
+    let result = await promise; // wait until the promise resolves (*)
+
+    // console.log(result)
+    return result
+}
+
+// one method to use with then and catch 
+// fun().then((e)=>{
+//     console.log(e);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+// console.log(fun())
+
+const res = async()=>{
+    const re = await fun();
+    console.log(re);
+}
+
+res();
